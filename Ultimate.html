@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DogeTime</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="./public/icons/logo.jpeg">
+
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./styles/cards.css">
+        <link rel="stylesheet" href="./styles/heading.css">
+    </head>
+    <body>
+        <nav>
+            <div class="left">
+                <a href="./index.html" class="logo">
+                    <!-- <img src="./public/icons/logo.svg" alt="logo"> -->
+                    Dogetime
+                </a>
+            </div>
+            <div class="right">
+                <div style="display: none;" class="mobile burger">
+    
+                </div>
+                <div class="nav_links">
+                    <a class="nav_link" href="./index.html">About us</a>
+                    <a class="nav_link" href="">Foods</a>
+                    <a class="nav_link" href="./Breeds.html">Breeds</a>
+                    <a class="nav_link" href="./Ultimate.html">Ultimate</a>
+                </div>
+                <div class="icons">
+                    <div class="cart filters">
+                        <img src="./public/icons/cart.svg" alt="Cart">
+                    </div>
+                    <div class="theme filters">
+                        <img id="mode" src="./public/icons/moon-stars.svg" alt="Theme mode">
+                    </div>
+                    <div class="sign filters">
+                        <a style="display: none;" href="./Profile.html" class="profile">
+                            <img src="" alt="Profile">
+                        </a>
+                        <a href="./Sign.html">
+                            <img src="./public/icons/sign-in.svg" alt="Sign">
+                        </a>
+                    </div>
+                    <script src="./js/themeChanger.js"></script>
+                    <script> let img = document.querySelector("#mode"); img.addEventListener("click", () => {if(localStorage.getItem("theme") == "dark") {localStorage.setItem("theme", "light"); img.src = "./public/icons/sun.svg";} else {localStorage.setItem("theme", "dark"); img.src = "./public/icons/moon-stars.svg";}checkTheme(); })</script>
+                    <div class="hamburger-menu">
+                        <input style="visibility: hidden;" id="menu__toggle" type="checkbox" />
+                        <label class="menu__btn" for="menu__toggle">
+                          <span></span>
+                        </label>
+                    
+                        <ul class="menu__box">
+                            <h1>Dogetime</h1>
+                            <li><a class="menu__item" href="../../../index.html">About us</a></li>
+                            <li><a class="menu__item" href="">Foods</a></li>
+                            <li><a class="menu__item" href="./Breeds.html">Breeds</a></li>
+                            <li><a class="menu__item" href="./Ultimate.html">Ultimate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="container">
+            <div class="heading">
+                <div class="ultimate search">
+                    <img class="filters" src="./public/icons/search.svg" alt="Search">
+                    <input placeholder="Search..." type="search" name="search" id="search">
+                </div>
+    
+                <div class="group-sort">
+                    <div class="ultimate group dropdown">
+                        <div class="select">
+                            <div class="selected">All Breed Groups</div>
+                            <div><img class="caret filters-2" src="./public/icons/caret-down-fill.svg" alt="caret-down"></div>
+                        </div>
+                        <ul id="menu" class="menu">
+                            <li class="active">All Breed Groups</li>
+                            <li>Toy</li>
+                            <li>Hound</li>
+                            <li>Terrier</li>
+                            <li>Working</li>
+                            <li>Mixed</li>
+                            <li>Non-Sporting</li>
+                            <li>Sporting</li>
+                            <li>Herding</li>
+                        </ul>
+                    </div>
+                    <div class="ultimate sort dropdown">
+                        <div id="select-1" class="select">
+                            <div class="selected">Sort by</div>
+                            <div><img class="caret filters-2" src="./public/icons/caret-down-fill.svg" alt="caret-down"></div>
+                        </div>
+                        <ul id="menu-1" class="menu">
+                            <li value="1" class="active">A-Z</li>
+                            <li value="-1">Z-A</li>
+                            <li value="1">By asc weight</li>
+                            <li value="-1">By desc weight</li>
+                            <li value="1">By asc height</li>
+                            <li value="-1">By desc height</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card_container grid">
+                <div id="cardItems" class="card_items grid">
+                    <!-- <a class="card grid">
+                        <div class="card_content grid">
+                            <img src="./public/dogs/1.jpeg" alt="Dog">
+                            <div class="card_text">
+                                <h4>Akbash</h4>
+                                <p>Guardian dogs</p>
+                            </div>
+                        </div>
+                    </a> -->
+    
+                </div>
+                <div onclick="pagination()" class="see">
+                    <h4>See more</h4>
+                </div>
+            </div>
+        </div>
+    
+        <footer>
+            <div class="main_footer">
+                <div class="footer_links">
+                    <a href="../../../index.html" class="footer_link main">Company</a>
+                    <a class="footer_link" href="../../../index.html">About Us</a>
+                    <a class="footer_link" target="_blank" href="https://www.petco.com/shop/en/petcostore">Inspiration</a>
+                    <a class="footer_link" target="_blank" href="https://youtu.be/dQw4w9WgXcQ?si=c5LDfddp_Y1TItdI">Pashalka</a>
+                </div>
+                <div class="footer_links">
+                    <a href="./Ultimate.html" class="footer_link main">Dogs</a>
+                    <a class="footer_link" href="">Foods</a>
+                    <a class="footer_link" href="./Breeds.html">Breeds</a>
+                    <a class="footer_link" href="./Ultimate.html">Ultimate</a>
+                </div>
+                <div class="footer_links">
+                    <a href="" class="footer_link main">Contacts</a>
+                    <div class="footer_divide">
+                        <div class="upper">
+                            <a class="footer_link" href="tel:+77474210407"><img class="filters-1" src="./public/icons/telephone.svg" alt=""></a>
+                            <a class="footer_link" href="mailto:kokenaoerasyl@gmail.com"><img class="filters-1" src="./public/icons/mail.svg" alt=""></a>
+                        </div>
+                        <div class="middle">
+                            <a class="footer_link" target="_blank" href="https://github.com/EraEKV"><img class="filters-1" src="./public/icons/github.svg" alt="github"></a>
+                            <a class="footer_link" target="_blank" href="https://www.linkedin.com/in/erasyl-kokenov-44aa632a9/"><img class="filters-1" src="./public/icons/linkedin.svg" alt="LinkedIn"></a>
+                        </div>
+                        <div class="bottom">
+                            <a class="footer_link" target="_blank" href="https://t.me/Era_EKV"><img class="filters-1" src="./public/icons/telegram.svg" alt="Telegram"></a>
+                            <a class="footer_link" target="_blank" href="https://www.instagram.com/thekokenov/"><img class="filters-1" src="./public/icons/instagram.svg" alt="Instagram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <h3>Dogetime</h3>
+                <p>© Copyright 2024 Dogetime Inc. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <a style="display: none" href="#" class="to-top">
+            <img src="./public/icons/caret-up-fill.svg" alt="To top">
+            <script>
+                const toTopBtn = document.querySelector('.to-top');
+                const triggerOffset = 600; 
+                function toggleToTopButton() {
+                    if (document.body.scrollTop > triggerOffset || document.documentElement.scrollTop > triggerOffset) {
+                        toTopBtn.style.display = 'block'
+                    } else {
+                        toTopBtn.style.display = 'none'
+                    }
+                }
+    
+                window.onscroll = function() {
+                    toggleToTopButton()
+                }
+            </script>
+        </a>
+    
+        <div id="show-chatbot" class="">
+            <div class="chatbot-button">
+                <img class="filters-1" src="./public/icons/chat-d.svg" alt="chat">
+                <img class="filters-1" src="./public/icons/close.svg" alt="close">
+            </div>
+            <div class="chatbot">
+                <div class="header">
+                    <h3>Dog Assistant</h3>
+                    <img class="filters-1" src="./public/icons/close.svg" alt="close">
+                </div>
+                <ul class="chatbox">
+                    <li class="chat incoming">
+                        <img src="./public/dogs/dog_assistant.jpeg" alt="dog assistant" class="dog_assistant">
+                        <p>Woof-woof! 🐶</p>
+                    </li>
+                    <!-- <li class="chat outgoing">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </li> -->
+                </ul>
+                <div class="chat-input">
+                    <textarea name="" id="" placeholder="Talk with me..." required></textarea>
+                    <img class="send-btn filters-2" src="./public/icons/send-fill.svg" alt="send">
+                </div>
+            </div>
+        </div>
+        <script src="./js/chat.js"></script>
+
+        <script src="./js/dog-breeds.js"></script>
+        <script src="./js/ultimate.js"></script>
+        <script src="./js/heading.js"></script>
+    </body>
+</html>

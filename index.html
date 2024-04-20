@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogeTime</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./public/icons/logo.jpeg">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/blocks.css">
+    <link rel="stylesheet" href="./styles/slider.css">
+    
+    <!-- font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic; -->
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <a href="./index.html" class="logo">
+                <!-- <img src="./public/icons/logo.svg" alt="logo"> -->
+                Dogetime
+            </a>
+        </div>
+        <div class="right">
+            <div class="nav_links">
+                <a class="nav_link" href="./index.html">About us</a>
+                <a class="nav_link" href="">Foods</a>
+                <a class="nav_link" href="./Breeds.html">Breeds</a>
+                <a class="nav_link" href="./Ultimate.html">Ultimate</a>
+            </div>
+            <div class="icons">
+                <div class="cart filters">
+                    <img src="./public/icons/cart.svg" alt="Cart">
+                </div>
+                <div class="theme filters">
+                    <img id="mode" src="./public/icons/moon-stars.svg" alt="Theme mode">
+                </div>
+                <div class="sign filters">
+                    <a style="display: none;" href="./Profile.html" class="profile">
+                        <img src="" alt="Profile">
+                    </a>
+                    <a href="./Sign.html">
+                        <img src="./public/icons/sign-in.svg" alt="Sign">
+                    </a>
+                </div>
+                <script src="./js/themeChanger.js"></script>
+                <script>let img = document.querySelector("#mode"); img.addEventListener("click", () => {if(localStorage.getItem("theme") == "dark") {localStorage.setItem("theme", "light"); img.src = "./public/icons/sun.svg";} else {localStorage.setItem("theme", "dark"); img.src = "./public/icons/moon-stars.svg";}checkTheme(); })</script>
+                <div class="hamburger-menu">
+                    <input style="visibility: hidden;" id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+                
+                    <ul class="menu__box">
+                        <h1>Dogetime</h1>
+                        <li><a class="menu__item" href="./index.html">About us</a></li>
+                        <li><a class="menu__item" href="">Foods</a></li>
+                        <li><a class="menu__item" href="./Breeds.html">Breeds</a></li>
+                        <li><a class="menu__item" href="./Ultimate.html">Ultimate</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <div class="header_content">
+                <span class="text">Make your friend </span>
+                <span class="typewriter text">very happy!</span>
+            </div>
+            <script>
+                const words = [
+                    "Uncountable Love",
+                    "Very Happy!",
+                    "Healthier",
+                    "Best Companion",
+                    "Good",
+                    "Important",
+                ]
+
+                const output = document.querySelector(".typewriter")
+                let charTurn = 0;
+                let wordTurn = 0;
+
+                const typingWord = () => {
+                    if(charTurn <= words[wordTurn].length) {
+                        let str = words[wordTurn].substr(0, charTurn)
+                        output.innerHTML = str
+                        charTurn++
+                        setTimeout(typingWord, 100)
+                    }
+                    // else if(charTurn == words[words.length - 1]) {
+                    //     output.classList.add
+                    // }
+                    else {
+                        setTimeout(deleteWord, 800)
+                    }
+                }
+                const deleteWord = () => {
+                    if(charTurn >= 0) {
+                        let str = words[wordTurn].substr(0, charTurn)
+                        output.innerHTML = str
+                        charTurn--
+                        setTimeout(deleteWord, 100)
+                    }
+                    else {
+                        wordTurn++
+                        if(words.length == wordTurn) {
+                            wordTurn = 0
+                        }
+                        setTimeout(typingWord, 150)
+                    }
+                }
+                typingWord()
+            </script>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slider__item">
+                        <img src="./public/dogs/1.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/6.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/3.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/4.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/5.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/2.jpeg" alt="Dog">
+                    </div>
+
+                    <div class="slider__item">
+                        <img src="./public/dogs/1.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/6.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/3.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/4.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/5.jpeg" alt="Dog">
+                    </div>
+                    <div class="slider__item">
+                        <img src="./public/dogs/2.jpeg" alt="Dog">
+                    </div>
+                </div>
+
+                <!-- <script>
+                    let copy = document.querySelector(".slider").cloneNode()
+                    document.querySelector(".slider-container").appendChild(copy)
+                </script> -->
+                
+            </div>
+        </header>
+
+        <section class="block_1">
+            <a href="">
+                <img src="./public/dogs/1.jpeg" alt="">
+                <div class="content">
+                    <h3>Explore Our <span>Features</span></h3>
+                    <p>Explore our diverse dog breed catalog featuring detailed profiles. Easily find your ideal breed using our intuitive search and filtering tools. Discover unique breed characteristics, compare options, and get personalized recommendations tailored to your preferences.</p>
+                </div>
+            </a>
+        </section>
+
+        <section class="block_2">
+            <a href="./Breeds.html">
+                <img src="./public/dogs/2.jpeg" alt="">
+                <div class="content">
+                    <h3>Discover a Variety of <span>Dog Breeds</span></h3>
+                    <p>Browse through our extensive catalog of dog breeds! Whether you're looking for a playful companion or a loyal guardian, we have diverse breeds to choose from. Our breed profiles provide detailed information on each breed's characteristics, temperament, and care needs. Let us assist you in finding the perfect canine companion for your lifestyle and preferences.</p>
+                </div>
+            </a>
+        </section>
+
+        <section class="block_3">
+            <a onclick="chatOpen()" href="#">
+                <img src="./public/dogs/3.jpeg" alt="">
+                <div class="content">
+                    <h3><span>AI-Powered</span> Dog Assistance </h3>
+                    <p>Experience the future of dog care with our AI assistant! Our innovative AI technology can help answer your questions about dog health, training tips, and nutritional advice. Whether you're a seasoned dog owner or new to canine companionship, our AI assistant is here to provide personalized guidance and support.</p>
+                </div>
+            </a>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="main_footer">
+            <div class="footer_links">
+                <a href="./About.html" class="footer_link main">Company</a>
+                <a class="footer_link" href="./index.html">About Us</a>
+                <a class="footer_link" target="_blank" href="https://basepaws.com/dog-breeds">Inspiration</a>
+                <a class="footer_link" target="_blank" href="https://youtu.be/dQw4w9WgXcQ?si=c5LDfddp_Y1TItdI">Pashalka</a>
+            </div>
+            <div class="footer_links">
+                <a href="./Ultimate.html" class="footer_link main">Dogs</a>
+                <a class="footer_link" href="">Foods</a>
+                <a class="footer_link" href="./Breeds.html">Breeds</a>
+                <a class="footer_link" href="./Ultimate.html">Ultimate</a>
+            </div>
+            <div class="footer_links">
+                <a href="" class="footer_link main">Contacts</a>
+                <div class="footer_divide">
+                    <div class="upper">
+                        <a class="footer_link" href="tel:+77474210407"><img class="filters-1" src="./public/icons/telephone.svg" alt=""></a>
+                        <a class="footer_link" href="mailto:kokenaoerasyl@gmail.com"><img class="filters-1" src="./public/icons/mail.svg" alt=""></a>
+                    </div>
+                    <div class="middle">
+                        <a class="footer_link" target="_blank" href="https://github.com/EraEKV"><img class="filters-1" src="./public/icons/github.svg" alt="github"></a>
+                        <a class="footer_link" target="_blank" href="https://www.linkedin.com/in/erasyl-kokenov-44aa632a9/"><img class="filters-1" src="./public/icons/linkedin.svg" alt="LinkedIn"></a>
+                    </div>
+                    <div class="bottom">
+                        <a class="footer_link" target="_blank" href="https://t.me/Era_EKV"><img class="filters-1" src="./public/icons/telegram.svg" alt="Telegram"></a>
+                        <a class="footer_link" target="_blank" href="https://www.instagram.com/thekokenov/"><img class="filters-1" src="./public/icons/instagram.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h3>Dogetime</h3>
+            <p>© Copyright 2024 Dogetime Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <a style="display: none" href="#" class="to-top">
+        <img src="./public/icons/caret-up-fill.svg" alt="To top">
+        <script>
+            const toTopBtn = document.querySelector('.to-top');
+            const triggerOffset = 600; 
+            function toggleToTopButton() {
+                if (document.body.scrollTop > triggerOffset || document.documentElement.scrollTop > triggerOffset) {
+                    toTopBtn.style.display = 'block'
+                } else {
+                    toTopBtn.style.display = 'none'
+                }
+            }
+
+            window.onscroll = function() {
+                toggleToTopButton()
+            }
+        </script>
+    </a>
+
+    <div id="show-chatbot" class="">
+        <div class="chatbot-button">
+            <img class="filters-1" src="./public/icons/chat-d.svg" alt="chat">
+            <img class="filters-1" src="./public/icons/close.svg" alt="close">
+        </div>
+        <div class="chatbot">
+            <div class="header">
+                <h3>Dog Assistant</h3>
+                <img class="filters-1" src="./public/icons/close.svg" alt="close">
+            </div>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <img src="./public/dogs/dog_assistant.jpeg" alt="dog assistant" class="dog_assistant">
+                    <p>Woof-woof! 🐶</p>
+                </li>
+                <!-- <li class="chat outgoing">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li> -->
+            </ul>
+            <div class="chat-input">
+                <textarea name="" id="" placeholder="Talk with me..." required></textarea>
+                <img class="send-btn filters-2" src="./public/icons/send-fill.svg" alt="send">
+            </div>
+        </div>
+        <!-- <div class="dots_animation">
+            <span class="dot one"></span>
+            <span class="dot two"></span>
+            <span class="dot three"></span>
+        </div> -->
+    </div>
+
+
+    <script src="./js/chat.js"></script>
+</body>
+</html>

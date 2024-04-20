@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogeTime</title>
+
+    <link rel="stylesheet" href="../../app/style.css">
+    <link rel="stylesheet" href="../styles/foods.css">
+    <!-- <link rel="stylesheet" href="../styles/heading.css"> -->
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <a href="../../app/index.html" class="logo">
+                <!-- <img src="../../../public/icons/logo.svg" alt="logo"> -->
+                Dogetime
+            </a>
+        </div>
+        <div class="right">
+            <div style="display: none;" class="mobile burger">
+
+            </div>
+            <div class="nav_links">
+                <a class="nav_link" href="../../app/index.html">About us</a>
+                <a class="nav_link" href="./Foods.html">Foods</a>
+                <a class="nav_link" href="./Advices.html">Advices</a>
+                <a class="nav_link" href="./Breeds.html">Breeds</a>
+            </div>
+            <div class="icons">
+                <div class="cart filters">
+                    <img src="../../../public/icons/cart.svg" alt="Cart">
+                </div>
+                <div class="theme filters">
+                    <img id="mode" src="../../../public/icons/moon-stars.svg" alt="Theme mode">
+                </div>
+                <div class="sign filters">
+                    <a style="display: none;" href="./Profile.html" class="profile">
+                        <img src="" alt="Profile">
+                    </a>
+                    <a href="./Sign.html">
+                        <img src="../../../public/icons/sign-in.svg" alt="Sign">
+                    </a>
+                </div>
+                <script src="../js/themeChanger.js"></script>
+                <script> let img = document.querySelector("#mode"); img.addEventListener("click", () => {if(localStorage.getItem("theme") == "dark") {localStorage.setItem("theme", "light"); img.src = "../../../public/icons/sun.svg";} else {localStorage.setItem("theme", "dark"); img.src = "../../../public/icons/moon-stars.svg";}checkTheme(); })</script>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card_container grid">
+            <div id="cardItems" class="card_items grid">
+                <a class="card grid">
+                    <div class="cart-system">
+                        <div class="cart__add add">
+                            <img src="../../../public/icons/plus-lg.svg" alt="add">
+                        </div>
+                        <div style="display: none;" class="cart__add added">
+                            <img  src="../../../public/icons/check-lg.svg" alt="added">
+                        </div>
+                    </div>
+                    <div class="card_content grid">
+                        <img src="https://headsupfortails.com/cdn/shop/files/combo_c4cd3ca0-8aa1-4af6-a04b-1a6bccf6dcdf.jpg?v=1709633332" alt="Food">
+                        <div class="card_text">
+                            <h4>Royal Canin</h4>
+                            <h4 class="price">5.00 $</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="card grid">
+                    <div class="card_content grid">
+                        <img src="https://headsupfortails.com/cdn/shop/files/064992560171-5.jpg?v=1705908759" alt="Food">
+                        <div class="card_text">
+                            <h4>Acana Classic</h4>
+                            <h4 class="price">15.00 $</h4>
+                        </div>
+                    </div>
+                </a>
+                <a class="card grid">
+                    <div class="card_content grid">
+                        <img src="https://headsupfortails.com/cdn/shop/files/Adult-GrainZero-1-2kg-Front-3.jpg?v=1690200635" alt="Food">
+                        <div class="card_text">
+                            <h4>Grain Zero</h4>
+                            <h4 class="price">19.99 $</h4>
+                        </div>
+                    </div>
+                </a>
+                <a class="card grid">
+                    <div class="card_content grid">
+                        <img src="https://headsupfortails.com/cdn/shop/files/8906002482832_1kg_0898f0f9-a0cb-4d65-8771-aacc47a53fba.jpg?v=1711436453" alt="Food">
+                        <div class="card_text">
+                            <h4>Pedigree Chicken</h4>
+                            <h4 class="price">25.00 $</h4>
+                        </div>
+                    </div>
+                </a>
+                <a class="card grid">
+                    <div class="card_content grid">
+                        <img src="https://headsupfortails.com/cdn/shop/files/Chicken_Turkey.jpg?v=1698658308" alt="Food">
+                        <div class="card_text">
+                            <h4>Sara's Food</h4>
+                            <h4 class="price">15.00 $</h4>
+                        </div>
+                    </div>
+                </a>
+                <a class="card grid">
+                    <div class="card_content grid">
+                        <img src="https://headsupfortails.com/cdn/shop/files/MasMSalmon500g.jpg?v=1700040338" alt="Food">
+                        <div class="card_text">
+                            <h4>Jer High</h4>
+                            <h4 class="price">4.99 $</h4>
+                        </div>
+                    </div>
+                </a>
+                <a class="card grid">
+                    <div class="card_content grid">
+                        <img src="https://headsupfortails.com/cdn/shop/files/064992182175-5.jpg?v=1705915421" alt="Food">
+                        <div class="card_text">
+                            <h4>Orijen original</h4>
+                            <h4 class="price">35.00 $</h4>
+                        </div>
+                    </div>
+                </a>
+                <a class="card grid">
+                    <div class="card_content grid">
+                        <img src="https://headsupfortails.com/cdn/shop/products/AcanaSmallBreedDryPuppyFood_164156b9-88da-4abe-8d72-e6fe2b0f67c2.jpg?v=1681897051" alt="Food">
+                        <div class="card_text">
+                            <h4>Arcana</h4>
+                            <h4 class="price">5.00 $</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="main_footer">
+            <div class="footer_links">
+                <a href="../../app/index.html" class="footer_link main">Company</a>
+                <a class="footer_link" href="../../app/index.html">About Us</a>
+                <a class="footer_link" target="_blank" href="https://www.petco.com/shop/en/petcostore">Inspiration</a>
+                <a class="footer_link" href="./Joke.html">Pashalka</a>
+            </div>
+            <div class="footer_links">
+                <a href="./Foods.html" class="footer_link main">Dogs</a>
+                <a class="footer_link" href="./Foods.html">Foods</a>
+                <a class="footer_link" href="./Breeds.html">Breeds</a>
+                <a class="footer_link" href="./Advices.html">Advices</a>
+            </div>
+            <div class="footer_links">
+                <a href="" class="footer_link main">Contacts</a>
+                <div class="footer_divide">
+                    <div class="upper">
+                        <a class="footer_link" href="tel:+77474210407"><img class="filters-1" src="../../../public/icons/telephone.svg" alt=""></a>
+                        <a class="footer_link" href="mailto:kokenaoerasyl@gmail.com"><img class="filters-1" src="../../../public/icons/mail.svg" alt=""></a>
+                    </div>
+                    <div class="middle">
+                        <a class="footer_link" target="_blank" href="https://github.com/EraEKV"><img class="filters-1" src="../../../public/icons/github.svg" alt="github"></a>
+                        <a class="footer_link" target="_blank" href="https://www.linkedin.com/in/erasyl-kokenov-44aa632a9/"><img class="filters-1" src="../../../public/icons/linkedin.svg" alt="LinkedIn"></a>
+                    </div>
+                    <div class="bottom">
+                        <a class="footer_link" target="_blank" href="https://t.me/Era_EKV"><img class="filters-1" src="../../../public/icons/telegram.svg" alt="Telegram"></a>
+                        <a class="footer_link" target="_blank" href="https://www.instagram.com/thekokenov/"><img class="filters-1" src="../../../public/icons/instagram.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h3>Dogetime</h3>
+            <p>© Copyright 2024 Dogetime Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <a style="display: none" href="#" class="to-top">
+        <img src="../../../public/icons/caret-up-fill.svg" alt="To top">
+        <script>
+            const toTopBtn = document.querySelector('.to-top');
+            const triggerOffset = 600; 
+            function toggleToTopButton() {
+                if (document.body.scrollTop > triggerOffset || document.documentElement.scrollTop > triggerOffset) {
+                    toTopBtn.style.display = 'block'
+                } else {
+                    toTopBtn.style.display = 'none'
+                }
+            }
+
+            window.onscroll = function() {
+                toggleToTopButton()
+            }
+        </script>
+    </a>
+
+    <div id="show-chatbot" class="">
+        <div class="chatbot-button">
+            <img class="filters-1" src="../../../public/icons/chat-d.svg" alt="chat">
+            <img class="filters-1" src="../../../public/icons/close.svg" alt="close">
+        </div>
+        <div class="chatbot">
+            <div class="header">
+                <h3>Dog Assistant</h3>
+                <img class="filters-1" src="../../../public/icons/close.svg" alt="close">
+            </div>
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <img src="../../../public/dogs/dog_assistant.jpeg" alt="dog assistant" class="dog_assistant">
+                    <p>Woof-woof! 🐶</p>
+                </li>
+                <!-- <li class="chat outgoing">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </li> -->
+            </ul>
+            <div class="chat-input">
+                <textarea name="" id="" placeholder="Talk with me..." required></textarea>
+                <img class="send-btn filters-2" src="../../../public/icons/send-fill.svg" alt="send">
+            </div>
+        </div>
+    </div>
+    <script src="../js/chat.js"></script>
+</body>
+</html>

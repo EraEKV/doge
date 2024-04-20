@@ -1,0 +1,88 @@
+@import url(./styles/reset.css);
+
+@import url(./styles/main.css);
+@import url(./styles/nav.css);
+@import url(./styles/chatbot.css);
+
+
+
+
+:root {
+    --bg-color: #2e2e2e; /* #faf9f6 */
+    --primary-color: #fff; /* #242424 */
+    --primary-color-1: #242424;/* #fff */
+    --dropdown-color: #9fa5b5;  /* #6b53ff */
+    --secondary-color: #9fa5b5; /*  */
+    --border-color: #383838; /* #ccc */
+    --footer-color: #2e2e2e; /* #fff */
+    --hover-color: #6b53ff;
+    --error-color: #721c24;
+    --box-color: #f1f1f1; /* #292929 */
+    --box-shadow: 0 3px 13px 0px rgba(0, 0, 0, 0.4);
+    --box-shadow-2: ;
+    --filter-param: invert(100%) sepia(100%) saturate(2%) hue-rotate(229deg) brightness(105%) contrast(101%);
+    --filter-1-param: invert(100%) sepia(100%) saturate(2%) hue-rotate(229deg) brightness(105%) contrast(101%);
+    --filter-2-param: invert(29%) sepia(53%) saturate(2474%) hue-rotate(233deg) brightness(107%) contrast(103%);
+    /* --font: "Roboto", sans-serif; */
+}
+
+
+
+
+@media (min-width: 328px) {
+    :root {
+        --fsh1: 24px;
+        --fsh3: 20px;
+        --fsh4: 18px;
+        --fsp: 16px;
+        --fss: 12px;
+        --nav-bottom: 40px;
+        --section-margin: 80px;
+        --footer-top: 80px;
+    }
+    
+}
+
+@media (min-width: 600px) {
+    :root {
+        --fsh1: 30px;
+        --fsh3: 24px;
+        --fsh4: 20px;
+        --fsp: 16px;
+        --fs-nav: 15px;
+        --fss: 13px;
+        --nav-bottom: 50px;
+        --section-margin: 100px;
+        --footer-top: 100px;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    :root {
+        --fsh1: 34px;
+        --fsh3: 28px;
+        --fsh4: 20px;
+        --fsp: 18px;
+        --fs-nav: 14px;
+        --fss: 15px;
+        --nav-bottom: 70px;
+        --section-margin: 100px;
+        --footer-top: 120px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --fsh1: 40px;
+        --fsh3: 32px;
+        --fsh4: 24px;
+        --fsp: 20px;
+        --fss: 16px;
+        --nav-bottom: 100px;
+        --section-margin: 120px;
+        --footer-top: 160px;
+    }
+
+}

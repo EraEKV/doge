@@ -1,0 +1,270 @@
+nav {
+    display: flex;
+    margin: 0 auto;
+    font-size: var(--fsp);
+    padding: 40px 3%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--box-color);
+    margin-bottom: var(--nav-bottom);
+    box-shadow: -4px 3px 13px 0px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+nav .left {
+    align-items: center;
+    text-align: center;
+}
+
+
+.left .logo {
+    font-size: var(--fsh1);
+}
+
+
+nav .right {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nav_links {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.nav_link {
+    position: relative;
+    font-size: var(--fs-nav);
+    display: block;
+    margin: 0 20px;
+    font-size: 1.2rem;
+    transition: .2s;
+}
+
+
+
+.nav_link:hover {
+    color: var(--hover-color);
+}
+
+.nav_link:after {
+    content: "";
+    position: absolute;
+    background-color: var(--hover-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: .3s;
+}
+
+
+.nav_link:hover:after {
+    width: 100%;
+    color: var(--hover-color);
+}
+
+
+nav .icons {
+    display: flex;
+    margin-left: 1rem;
+}
+
+
+nav .filters img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin: 0 .5rem;
+}
+
+
+/* burger menu */
+
+#menu__toggle {
+    opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    position: absolute;
+    display: block;
+    border: none;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition-duration: .3s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  /* padding: 80px 0 0 0; */
+  padding-top: 20px;
+  list-style: none;
+  background-color: var(--bg-color);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  z-index: 10;
+  transition-duration: .25s;
+}
+.menu__box h1 {
+    padding: 12px 24px;
+    font-weight: 600;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+
+
+
+
+@media (min-width: 328px) {
+    nav {
+        padding: 25px 2% 25px 3%;
+    }
+
+    .nav_links {
+        display: none;
+    }
+    .right {
+        margin-right: 20px;
+    }
+
+    .menu__btn {
+        top: 36px;
+    }
+
+    .right {
+        margin-right: 25px;
+    }
+
+    nav .filters img {
+        width: 23px;
+        height: 23px;
+        margin: 0 0.5rem;
+    }
+    
+}
+
+@media (min-width: 600px) {
+    nav {
+        padding: 32px 0 32px 3%;
+    }
+    /* .nav_links {
+        display: none;
+    } */
+
+    .right {
+        margin-right: 35px;
+    }
+
+    nav .filters img {
+        margin: 0 .6rem;
+    }
+
+    .menu__btn {
+        top: 45px;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        padding: 30px 3%;
+    }
+
+    nav .filters img {
+        margin: 0 .6rem;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .right {
+        margin-right: 0;
+    }
+
+    .nav_links {
+        display: flex;
+    }
+
+    .nav_link {
+        margin: 0 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        padding: 40px 3%;
+    }
+
+    .nav_link {
+        margin: 0 20px;
+    }
+
+    nav .filters img {
+        width: 24px;
+        height: 24px;
+        margin: 0 .7rem;
+    }
+
+    
+}
