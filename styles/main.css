@@ -228,6 +228,7 @@ footer a {
     .to-top {
         padding: 1rem;
         bottom: 6.5rem;
+        right: 1.5rem;
     }
 
     .to-top img {
@@ -304,6 +305,7 @@ footer a {
     .to-top {
         bottom: 8rem;
         padding: 1.25rem;
+        right: 2rem;
     }
 
     .to-top img {
