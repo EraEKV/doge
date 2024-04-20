@@ -229,6 +229,7 @@
 @media (min-width: 328px) {
     .chatbot-button {
         padding: 1.7rem;
+        right: 1.5rem;
     }
 
     .chatbot-button img {
@@ -269,6 +270,7 @@
 @media (min-width: 1024px) {
     .chatbot-button {
         padding: 2rem;
+        right: 2rem;
     }
 
     .chatbot-button img {
