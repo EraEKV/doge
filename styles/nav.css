@@ -157,7 +157,7 @@ nav .filters img {
 .menu__item {
   display: block;
   padding: 12px 24px;
-  color: #333;
+  color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 500;
