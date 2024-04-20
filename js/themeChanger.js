@@ -2,7 +2,7 @@ img = document.querySelector("#mode")
 const checkTheme = () => {
     let theme = localStorage.getItem("theme")
     if (theme == "light") {
-        img?.src = "./public/icons/sun.svg"
+        img.src = "./public/icons/sun.svg"
         document.documentElement.style.setProperty('--filter-param', 'none')                  
         document.documentElement.style.setProperty('--filter-2-param', 'invert(29%) sepia(53%) saturate(2474%) hue-rotate(233deg) brightness(107%) contrast(103%)')                  
         document.documentElement.style.setProperty('--bg-color', '#faf9f6')
@@ -14,7 +14,7 @@ const checkTheme = () => {
         document.documentElement.style.setProperty('--primary-color-1', '#fff')
         // 242424
     } else {
-        img?.src = "./public/icons/moon-stars.svg"
+        img.src = "./public/icons/moon-stars.svg"
         document.documentElement.style.setProperty('--filter-param', 'invert(100%) sepia(100%) saturate(2%) hue-rotate(229deg) brightness(105%) contrast(101%)')     
         document.documentElement.style.setProperty('--filter-2-param', 'invert(73%) sepia(17%) saturate(225%) hue-rotate(186deg) brightness(88%) contrast(89%)')                  
         document.documentElement.style.setProperty('--footer-color', '#141414')
